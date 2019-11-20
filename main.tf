@@ -2,14 +2,6 @@
 # Terraform Infrastructure Definitions
 # ---------------------------------------------------------------------------------------------------------------------
 
-# terraform {
-#   backend "s3" {}
-# }
-
-# locals {
-#   some_var = "some_val"
-# }
-
 provider "aws" {
   access_key                  = "mockkeyid"
   region                      = "us-east-1"
@@ -26,15 +18,5 @@ provider "aws" {
     s3       = "http://localhost:4572"
     sns      = "http://localhost:4575"
     sqs      = "http://localhost:4576"
-  }
-}
-
-resource "aws_s3_bucket" "local" {
-  bucket = "my-tf-test-bucket"
-  acl    = "private"
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
   }
 }

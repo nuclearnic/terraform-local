@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#Create SQS queues
+Create SQS queues
 declare -a queues=(
 "localstack_queue_1"
 "localstack_queue_2"
